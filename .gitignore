@@ -3,6 +3,7 @@ Build
 _build
 blib
 pm_to_blib
+*.patch
 *.orig
 *.new
 *.rej

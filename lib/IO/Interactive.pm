@@ -26,10 +26,9 @@ sub is_interactive {
     }
 
     # If *ARGV isn't opened, it will be interactive if *STDIN is attached 
-    # to a terminal and either there are no files specified on the command line
-    # or if there are files and the first is the magic '-' file
+    # to a terminal.
     else {
-        return -t *STDIN && (@ARGV==0 || $ARGV[0] eq '-');
+        return -t *STDIN;
     }
 }
 
@@ -170,16 +169,17 @@ develop interactive applications...
 
 =item C<is_interactive()>
 
-This subroutine returns true if C<*ARGV> and C<*STDOUT> are connected to 
-the terminal. The test is considerably more sophisticated than:
+This subroutine returns true if C<*ARGV> and the currently selected
+filehandle (usually C<*STDOUT>) are connected to the terminal. The 
+test is considerably more sophisticated than:
 
     -t *ARGV && -t *STDOUT
 
 as it takes into account the magic behaviour of C<*ARGV>.
 
 You can also pass C<is_interactive> a writable filehandle, in which case it
-requires that filehandle be connected to a terminal (instead of C<*STDOUT>).
-The usual suspect here is C<*STDERR>:
+requires that filehandle be connected to a terminal (instead of the
+currently selected).  The usual suspect here is C<*STDERR>:
 
     if ( is_interactive(*STDERR) ) {
         carp $warning;
