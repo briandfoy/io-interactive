@@ -1,6 +1,6 @@
 package IO::Interactive;
 
-use version; $VERSION = qv('0.0.2');
+use version; $VERSION = qv('0.0.3');
 
 use warnings;
 use strict;
@@ -8,7 +8,7 @@ use Carp;
 use Scalar::Util qw( openhandle );
 
 sub is_interactive {
-    my ($out_handle) = (@_, \*STDOUT);    # Default to STDOUT
+    my ($out_handle) = (@_, select);    # Default to default output handle
 
     # Not interactive if output is not to terminal...
     return 0 if not -t $out_handle;
@@ -134,7 +134,7 @@ IO::Interactive - Utilities for interactive I/O
 
 =head1 VERSION
 
-This document describes IO::Interactive version 0.0.1
+This document describes IO::Interactive version 0.0.3
 
 
 =head1 SYNOPSIS

@@ -1,4 +1,4 @@
-IO::Interactive version 0.0.2
+IO::Interactive version 0.0.3
 
 This module provides three utility subroutines that make it easier to
 develop interactive applications:
