@@ -3,3 +3,8 @@ Revision history for IO-Interactive
 0.0.1  Thu Mar 17 04:56:55 2005
        Initial release.
 
+
+
+0.0.2  Sun May 22 05:41:14 2005
+
+    - added dependency on version.pm

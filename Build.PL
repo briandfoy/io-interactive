@@ -9,6 +9,7 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/IO/Interactive.pm',
     requires => {
         'Test::More' => 0,
+        'version'    => 0,
     },
     add_to_cleanup      => [ 'IO-Interactive-*' ],
 );
