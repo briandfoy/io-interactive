@@ -1,6 +1,6 @@
 ---
 name: IO-Interactive
-version: 0.0.3
+version: 0.0.3_01
 author:
   - 'Damian Conway <DCONWAY@cpan.org>'
 abstract: Utilities for interactive I/O
@@ -13,7 +13,7 @@ requires:
 provides:
   IO::Interactive:
     file: lib/IO/Interactive.pm
-    version: 0.0.3
+    version: 0.0.3_01
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

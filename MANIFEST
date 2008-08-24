@@ -1,10 +1,12 @@
-Build.PL
 Changes
-MANIFEST
-META.yml # Will be created by "make dist"
-Makefile.PL
-README
+examples/interactive.pl
+examples/memory_test.pl
 lib/IO/Interactive.pm
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+META.yml
+README
 t/00.load.t
 t/busy.t
 t/interactive.t

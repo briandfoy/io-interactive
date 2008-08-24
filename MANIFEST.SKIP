@@ -1,0 +1,13 @@
+\.git
+_build
+blib
+pm_to_blib
+\.bak$
+Build
+\.DS_Store
+\.orig$
+\.rej$
+\.new$
+Makefile$
+Makefile.old
+\.gz$
