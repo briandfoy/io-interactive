@@ -11,3 +11,5 @@ Build
 Makefile$
 Makefile.old
 \.gz$
+META.yml
+.releaserc
