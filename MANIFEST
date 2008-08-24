@@ -1,0 +1,13 @@
+Build.PL
+Changes
+MANIFEST
+META.yml # Will be created by "make dist"
+Makefile.PL
+README
+lib/IO/Interactive.pm
+t/00.load.t
+t/busy.t
+t/interactive.t
+t/is_interactive.t
+t/pod-coverage.t
+t/pod.t
