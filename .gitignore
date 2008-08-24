@@ -12,3 +12,4 @@ IO-*
 *.bak
 Makefile
 *.old
+META.yml
