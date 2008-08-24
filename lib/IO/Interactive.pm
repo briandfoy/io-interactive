@@ -33,7 +33,13 @@ sub is_interactive {
     }
 }
 
-open my $dev_null, '>', \do{my $dev_null};
+local (*DEV_NULL, *DEV_NULL2);
+my $dev_null;
+BEGIN {
+    pipe *DEV_NULL, *DEV_NULL2
+        or die "Internal error: can't create null filehandle";
+    $dev_null = \*DEV_NULL;
+}
 
 sub interactive {
     my ($out_handle) = (@_, \*STDOUT);      # Default to STDOUT

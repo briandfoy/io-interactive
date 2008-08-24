@@ -1,1 +1,10 @@
 .DS_Store
+Build
+_build
+blib
+pm_to_blib
+*.orig
+*.new
+*.rej
+*.gz
+IO-*
