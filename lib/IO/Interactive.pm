@@ -1,6 +1,6 @@
 package IO::Interactive;
 
-use version; $VERSION = qv('0.0.3_01');
+use version; $VERSION = qv('0.0.4');
 
 use warnings;
 use strict;
