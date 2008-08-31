@@ -1,5 +1,11 @@
 Revision history for IO-Interactive
 
+0.04 - Sun Aug 31 13:54:27 2008
+	* Fixes include:
+	* #24823: is_interactive() and command line arguments
+	* #38660: "null" filehandle is a memory leak
+	* #20689: IO::Interactive leaks temp files
+
 0.03_01 - Sun Aug 24 21:53:11 2008
 	* Cleaning up old tickets:
 	+ #20689 Now that we don't use a scalar filehandle,
