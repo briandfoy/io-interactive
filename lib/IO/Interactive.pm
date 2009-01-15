@@ -1,6 +1,6 @@
 package IO::Interactive;
 
-use version; $VERSION = qv('0.0.4');
+use version; $VERSION = qv('0.0.5');
 
 use warnings;
 use strict;
@@ -136,10 +136,9 @@ __END__
 
 IO::Interactive - Utilities for interactive I/O
 
-
 =head1 VERSION
 
-This document describes IO::Interactive version 0.0.3
+This document describes IO::Interactive version 0.0.5
 
 
 =head1 SYNOPSIS
@@ -244,7 +243,6 @@ Scalar::Util module.
 =head1 INCOMPATIBILITIES
 
 None reported.
-
 
 =head1 BUGS AND LIMITATIONS
 
