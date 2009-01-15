@@ -1,5 +1,9 @@
 Revision history for IO-Interactive
 
+0.05 - Wed Jan 14 22:54:13 2009
+	* Happy 2009! There aren't any code changes, but I needed to 
+	make the version in the Pod match the code version.
+
 0.04 - Sun Aug 31 13:54:27 2008
 	* Fixes include:
 	* #24823: is_interactive() and command line arguments
