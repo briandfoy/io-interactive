@@ -13,3 +13,4 @@ Makefile.old
 \.gz$
 META.yml
 .releaserc
+^IO-
