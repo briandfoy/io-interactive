@@ -1,6 +1,6 @@
 package IO::Interactive;
 
-use version; $VERSION = qv('0.0.5');
+use version; $VERSION = qv('0.0.6');
 
 use warnings;
 use strict;
@@ -138,7 +138,7 @@ IO::Interactive - Utilities for interactive I/O
 
 =head1 VERSION
 
-This document describes IO::Interactive version 0.0.5
+This document describes IO::Interactive version 0.0.6
 
 
 =head1 SYNOPSIS
