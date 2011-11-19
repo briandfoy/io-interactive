@@ -1,5 +1,18 @@
 Revision history for IO-Interactive
 
+1.01 - Fri Nov 18 18:36:31 2011
+    * Decrease memory use a bit ***:
+        1. lazy load Carp.pm only if we're about to croak()
+        2. Remove use of version.pm since a decimal will do (made it 1.01 per discussion) - moots rt 50120
+        3. Remove the need for Scalar::Util
+        
+          *** Baseline RSS 1204, 
+              Orig RSS 2464 (+1260), 
+              New RSS 2244 (+1040)
+          
+              Technically -220 not a *huge* gain, but the ::Tiny version I'd worked up before this patch had an RSS of 1332 (+128). 
+              I need to look into that and see if anything else could be done here.
+        
 0.05 - Wed Jan 14 22:54:13 2009
 	* Happy 2009! There aren't any code changes, but I needed to 
 	make the version in the Pod match the code version.
