@@ -1,11 +1,9 @@
 package IO::Interactive;
 
-use version; $VERSION = qv('0.0.6');
-
-use warnings;
 use strict;
-use Carp;
-use Scalar::Util qw( openhandle );
+use warnings;
+
+$IO::Interactive::VERSION = '1.01';
 
 sub is_interactive {
     my ($out_handle) = (@_, select);    # Default to default output handle
@@ -14,7 +12,8 @@ sub is_interactive {
     return 0 if not -t $out_handle;
 
     # If *ARGV is opened, we're interactive if...
-    if (openhandle *ARGV) {
+    if ( tied(*ARGV) or defined(fileno(ARGV)) ) { # this is what 'Scalar::Util::openhandle *ARGV' boils down to
+    
         # ...it's currently opened to the magic '-' file
         return -t *STDIN if defined $ARGV && $ARGV eq '-';
 
@@ -112,8 +111,6 @@ sub busy (&) {
     return $read;
 }
 
-use Carp;
-
 sub import {
     my ($package) = shift;
     my $caller = caller;
@@ -122,12 +119,12 @@ sub import {
     for my $request ( @_ ) {
         no strict 'refs';
         my $impl = *{$package.'::'.$request}{CODE};
-        croak "Unknown subroutine ($request()) requested"
+        require Carp;
+        Carp::croak "Unknown subroutine ($request()) requested"
             if !$impl || $request =~ m/\A _/xms;
         *{$caller.'::'.$request} = $impl;
     }
 }
-
 
 1; # Magic true value required at end of module
 __END__
@@ -138,7 +135,7 @@ IO::Interactive - Utilities for interactive I/O
 
 =head1 VERSION
 
-This document describes IO::Interactive version 0.0.6
+This document describes IO::Interactive version 1.01
 
 
 =head1 SYNOPSIS
@@ -258,6 +255,8 @@ L<http://rt.cpan.org>.
 Damian Conway  C<< <DCONWAY@cpan.org> >>
 
 Currently maintained by brian d foy C<< <bdfoy@cpan.org> >>
+
+1.01 patch DMUEY C<< dmuey@cpan.org >>
 
 =head1 LICENCE AND COPYRIGHT
 
