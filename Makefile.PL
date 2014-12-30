@@ -14,4 +14,15 @@ WriteMakefile(
     	},
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'IO-Interactive-* _build Build' },
+
+	'META_MERGE' => {
+		'meta-spec' => { version => 2 },
+		resources => {
+			repository => {
+				type => 'git',
+				url  => 'git@github.com:briandfoy/io-interactive.git',
+				web  => 'https://github.com/briandfoy/io-interactive',
+				},
+			},
+		},
 );
