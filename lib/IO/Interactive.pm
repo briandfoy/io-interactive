@@ -196,10 +196,9 @@ application is interactive:
 
 You can also pass C<interactive> a writable filehandle, in which case it
 writes to that filehandle if it is connected to a terminal (instead of 
-writinbg to C<*STDOUT>). Once again, the usual suspect is C<*STDERR>:
+writing to C<*STDOUT>). Once again, the usual suspect is C<*STDERR>:
 
     print {interactive(*STDERR)} $warning;
-
 
 =item C<busy {...}>
 
