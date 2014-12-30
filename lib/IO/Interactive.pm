@@ -3,7 +3,7 @@ package IO::Interactive;
 use strict;
 use warnings;
 
-$IO::Interactive::VERSION = '1.01';
+$IO::Interactive::VERSION = '1.02';
 
 sub is_interactive {
     my ($out_handle) = (@_, select);    # Default to default output handle
@@ -135,8 +135,7 @@ IO::Interactive - Utilities for interactive I/O
 
 =head1 VERSION
 
-This document describes IO::Interactive version 1.01
-
+This document describes IO::Interactive version 1.02
 
 =head1 SYNOPSIS
 
