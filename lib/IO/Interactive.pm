@@ -60,7 +60,7 @@ sub busy (&) {
     # Non-interactive busy-ness is easy...just do it
     if (!is_interactive()) {
         $block_ref->();
-        open my $fh, '<', \"";
+        open my $fh, '<', \ "";
         return $fh;
     }
 
@@ -98,7 +98,7 @@ sub busy (&) {
 
     # Temporarily close the input...
     local *ARGV;
-    open *ARGV, '<', \"";
+    open *ARGV, '<', \ "";
 
     # Do the job...
     $block_ref->();
