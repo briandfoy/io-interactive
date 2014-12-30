@@ -5,6 +5,7 @@ lib/IO/Interactive.pm
 Makefile.PL
 MANIFEST
 MANIFEST.SKIP
+META.yml
 README
 t/00.load.t
 t/busy.t
@@ -12,4 +13,3 @@ t/interactive.t
 t/is_interactive.t
 t/pod-coverage.t
 t/pod.t
-META.yml
