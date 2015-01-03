@@ -20,7 +20,7 @@ WriteMakefile(
 		resources => {
 			repository => {
 				type => 'git',
-				url  => 'git@github.com:briandfoy/io-interactive.git',
+				url  => 'https://github.com/briandfoy/io-interactive.git',
 				web  => 'https://github.com/briandfoy/io-interactive',
 				},
 			},
