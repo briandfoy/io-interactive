@@ -13,11 +13,13 @@ Revision history for Perl module IO::Interactive
               Technically -220 not a *huge* gain, but the ::Tiny version I'd worked up before this patch had an RSS of 1332 (+128).
               I need to look into that and see if anything else could be done here.
 
-0.05 - Wed Jan 14 22:54:13 2009
+0.0.6 - 2009-01-14
+
+0.0.5 - Wed Jan 14 22:54:13 2009
 	* Happy 2009! There aren't any code changes, but I needed to
 	make the version in the Pod match the code version.
 
-0.04 - Sun Aug 31 13:54:27 2008
+0.0.4 - Sun Aug 31 13:54:27 2008
 	* Fixes include:
 	* #24823: is_interactive() and command line arguments
 	* #38660: "null" filehandle is a memory leak
@@ -33,15 +35,13 @@ Revision history for Perl module IO::Interactive
 	printing to a scalar
 	* Maintainer is now brian d foy <bdfoy@cpan.org>
 
-0.0.1  Thu Mar 17 04:56:55 2005
-       Initial release.
-
-
+0.0.3  Fri Feb 17 15:57:54 2006
+	* Fixed is_interactive to default to currently selected filehandle,
+      rather than to *STDOUT.
 
 0.0.2  Sun May 22 05:41:14 2005
     * added dependency on version.pm
 
+0.0.1  Thu Mar 17 04:56:55 2005
+       Initial release.
 
-0.0.3  Fri Feb 17 15:57:54 2006
-	* Fixed is_interactive to default to currently selected filehandle,
-      rather than to *STDOUT.
