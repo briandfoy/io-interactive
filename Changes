@@ -25,11 +25,11 @@ Revision history for IO-Interactive
 
 0.03_01 - Sun Aug 24 21:53:11 2008
 	* Cleaning up old tickets:
-	+ #20689 Now that we don't use a scalar filehandle,
+	* #20689 Now that we don't use a scalar filehandle,
 	no extra temp files under 5.6.2
-	+ #24823 Applied Schwern's patch to ignore command
+	* #24823 Applied Schwern's patch to ignore command
 	line arguments
-	+ #38660 Fix memory link (same fix for #20689, not
+	* #38660 Fix memory link (same fix for #20689, not
 	printing to a scalar
 	* Maintainer is now brian d foy <bdfoy@cpan.org>
 
@@ -39,11 +39,9 @@ Revision history for IO-Interactive
 
 
 0.0.2  Sun May 22 05:41:14 2005
-
-    - added dependency on version.pm
+    * added dependency on version.pm
 
 
 0.0.3  Fri Feb 17 15:57:54 2006
-
-    - Fixed is_interactive to default to currently selected filehandle,
+	* Fixed is_interactive to default to currently selected filehandle,
       rather than to *STDOUT.
