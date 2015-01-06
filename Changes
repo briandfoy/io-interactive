@@ -6,7 +6,7 @@ Revision history for Perl module IO::Interactive
         2. Remove use of version.pm since a decimal will do (made it 1.01 per discussion) - moots rt 50120
         3. Remove the need for Scalar::Util
 
-          *** Baseline RSS 1204,
+          === Baseline RSS 1204,
               Orig RSS 2464 (+1260),
               New RSS 2244 (+1040)
 
@@ -43,5 +43,5 @@ Revision history for Perl module IO::Interactive
     * added dependency on version.pm
 
 0.0.1  Thu Mar 17 04:56:55 2005
-       Initial release.
+ 	* Initial release.
 
