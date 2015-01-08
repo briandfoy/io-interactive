@@ -1,20 +1,25 @@
 require 5.008;
+
+package IO::Interactive;
 use strict;
 use warnings;
 
-my $module    = 'IO::Interactive';
+use File::Spec::Functions qw(catfile);
+
+my $module    = __PACKAGE__;
 my $github    = 'https://github.com/briandfoy/io-interactive';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
     NAME                => $module,
-    AUTHOR              => 'Damian Conway <DCONWAY@cpan.org>',
     VERSION_FROM        => $main_file,
     ABSTRACT_FROM       => $main_file,
     LICENSE             => 'perl',
+    AUTHOR              => 'Damian Conway <DCONWAY@cpan.org>',
 
 	'CONFIGURE_REQUIRES' => {
-		'ExtUtils::MakeMaker' => '6.64',
+		'ExtUtils::MakeMaker'   => '6.64',
+		'File::Spec::Functions' => '0',
 		},
 
 	'BUILD_REQUIRES' => {
