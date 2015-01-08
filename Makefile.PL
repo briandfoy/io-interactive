@@ -1,33 +1,50 @@
+require 5.008;
 use strict;
 use warnings;
 
-my $github    = 'https://github.com/briandfoy/';
-my $main_file = 'lib/';
+my $module    = 'IO::Interactive';
+my $github    = 'https://github.com/briandfoy/io-interactive';
+my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
-    NAME                => 'IO::Interactive',
+    NAME                => $module,
     AUTHOR              => 'Damian Conway <DCONWAY@cpan.org>',
-    VERSION_FROM        => 'lib/IO/Interactive.pm',
-    ABSTRACT_FROM       => 'lib/IO/Interactive.pm',
+    VERSION_FROM        => $main_file,
+    ABSTRACT_FROM       => $main_file,
     LICENSE             => 'perl',
-    PREREQ_PM => {
-        'Test::More' => '0',
+
+	'CONFIGURE_REQUIRES' => {
+		'ExtUtils::MakeMaker' => '6.64',
+		},
+
+	'BUILD_REQUIRES' => {
+		},
+
+	'TEST_REQUIRES' => {
+		'Test::More' => '0.94',
+		},
+
+	'PREREQ_PM'     => {
         'version'    => '0.78',
-    	},
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'IO-Interactive-* _build Build' },
+		},
 
 	'META_MERGE' => {
 		'meta-spec' => { version => 2 },
 		resources => {
 			repository => {
 				type => 'git',
-				url  => 'https://github.com/briandfoy/io-interactive.git',
-				web  => 'https://github.com/briandfoy/io-interactive',
+				url  => "$github.git",
+				web  => $github,
 				},
+			bugtraker => {
+				web    => "$github/issues",
+				},
+			homepage => $github,
 			},
 		},
-);
+
+    clean               => { FILES => 'IO-Interactive-* _build Build' },
+	);
 
 sub arguments { \%WriteMakefile }
 
