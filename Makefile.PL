@@ -1,8 +1,10 @@
 require 5.008;
+
+package IO::Interactive;
 use strict;
 use warnings;
 
-my $module    = 'IO::Interactive';
+my $module    = __PACKAGE__;
 ( my $dist = $module ) =~ s/::/-/g;
 
 my $github    = 'https://github.com/briandfoy/io-interactive';
