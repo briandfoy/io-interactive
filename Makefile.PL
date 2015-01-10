@@ -3,6 +3,8 @@ use strict;
 use warnings;
 
 my $module    = 'IO::Interactive';
+( my $dist = $module ) =~ s/::/-/g;
+
 my $github    = 'https://github.com/briandfoy/io-interactive';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
