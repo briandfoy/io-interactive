@@ -46,7 +46,7 @@ my %WriteMakefile = (
 			},
 		},
 
-    clean               => { FILES => 'IO-Interactive-* _build Build' },
+	clean => { FILES => "$dist-*" },
 	);
 
 sub arguments { \%WriteMakefile }
