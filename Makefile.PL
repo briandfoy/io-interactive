@@ -4,6 +4,8 @@ package IO::Interactive;
 use strict;
 use warnings;
 
+use File::Spec::Functions qw(catfile);
+
 my $module    = __PACKAGE__;
 ( my $dist = $module ) =~ s/::/-/g;
 
