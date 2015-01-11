@@ -13,11 +13,13 @@ my $github    = 'https://github.com/briandfoy/io-interactive';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
-    NAME                => $module,
-    AUTHOR              => 'Damian Conway <DCONWAY@cpan.org>',
-    VERSION_FROM        => $main_file,
-    ABSTRACT_FROM       => $main_file,
-    LICENSE             => 'perl',
+ 	'MIN_PERL_VERSION' => '5.008',
+
+	'NAME'                => $module,
+    'AUTHOR'              => 'Damian Conway <DCONWAY@cpan.org>',
+    'VERSION_FROM'        => $main_file,
+    'ABSTRACT_FROM'       => $main_file,
+    'LICENSE'             => 'perl',
 
 	'CONFIGURE_REQUIRES' => {
 		'ExtUtils::MakeMaker'   => '6.64',
