@@ -13,18 +13,18 @@ sub is_interactive {
 
     # If *ARGV is opened, we're interactive if...
     if ( tied(*ARGV) or defined(fileno(ARGV)) ) { # this is what 'Scalar::Util::openhandle *ARGV' boils down to
-    
+
         # ...it's currently opened to the magic '-' file
         return -t *STDIN if defined $ARGV && $ARGV eq '-';
 
         # ...it's at end-of-file and the next file is the magic '-' file
         return @ARGV>0 && $ARGV[0] eq '-' && -t *STDIN if eof *ARGV;
 
-        # ...it's directly attached to the terminal 
+        # ...it's directly attached to the terminal
         return -t *ARGV;
     }
 
-    # If *ARGV isn't opened, it will be interactive if *STDIN is attached 
+    # If *ARGV isn't opened, it will be interactive if *STDIN is attached
     # to a terminal.
     else {
         return -t *STDIN;
@@ -129,6 +129,8 @@ sub import {
 1; # Magic true value required at end of module
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 IO::Interactive - Utilities for interactive I/O
@@ -165,7 +167,7 @@ develop interactive applications...
 =item C<is_interactive()>
 
 This subroutine returns true if C<*ARGV> and the currently selected
-filehandle (usually C<*STDOUT>) are connected to the terminal. The 
+filehandle (usually C<*STDOUT>) are connected to the terminal. The
 test is considerably more sophisticated than:
 
     -t *ARGV && -t *STDOUT
@@ -194,7 +196,7 @@ application is interactive:
     my $value = <>;
 
 You can also pass C<interactive> a writable filehandle, in which case it
-writes to that filehandle if it is connected to a terminal (instead of 
+writes to that filehandle if it is connected to a terminal (instead of
 writing to C<*STDOUT>). Once again, the usual suspect is C<*STDERR>:
 
     print {interactive(*STDERR)} $warning;
