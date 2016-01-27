@@ -230,7 +230,6 @@ You asked for something else. Maybe you misspelled the subroutine you wanted.
 
 IO::Interactive requires no configuration files or environment variables.
 
-
 =head1 DEPENDENCIES
 
 This module requires the C<openhandle()> subroutine from the
