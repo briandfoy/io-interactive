@@ -249,6 +249,11 @@ Please report any bugs or feature requests to
 C<bug-io-interactive@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.
 
+=head1 SOURCE AVAILABILITY
+
+This code is in GitHub:
+
+	https://github.com/briandfoy/io-interactive
 
 =head1 AUTHOR
 
