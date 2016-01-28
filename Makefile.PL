@@ -65,7 +65,6 @@ my %WriteMakefile = (
 		},
 
 	'PREREQ_PM'     => {
-        'version'    => '0.78',
 		},
 
 	'META_MERGE' => {
