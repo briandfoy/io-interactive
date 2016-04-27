@@ -244,9 +244,8 @@ None reported.
 
 No bugs have been reported.
 
-Please report any bugs or feature requests to
-C<bug-io-interactive@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.
+Please report any bugs or feature requests to Github
+L<https://github.com/briandfoy/io-interactive/issues>.
 
 =head1 SOURCE AVAILABILITY
 
@@ -258,7 +257,7 @@ This code is in GitHub:
 
 Damian Conway  C<< <DCONWAY@cpan.org> >>
 
-Currently maintained by brian d foy C<< <bdfoy@cpan.org> >>
+Currently maintained by brian d foy C<< <bdfoy@cpan.org> >>.
 
 1.01 patch DMUEY C<< dmuey@cpan.org >>
 
