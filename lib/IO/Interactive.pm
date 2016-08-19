@@ -119,9 +119,10 @@ sub import {
     for my $request ( @_ ) {
         no strict 'refs';
         my $impl = *{$package.'::'.$request}{CODE};
-        require Carp;
-        Carp::croak "Unknown subroutine ($request()) requested"
-            if !$impl || $request =~ m/\A _/xms;
+        if(!$impl || $request =~ m/\A _/xms) {
+            require Carp;
+            Carp::croak("Unknown subroutine ($request()) requested");
+        }
         *{$caller.'::'.$request} = $impl;
     }
 }
