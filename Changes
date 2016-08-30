@@ -1,5 +1,8 @@
 Revision history for Perl module IO::Interactive
 
+1.021_02 2016-08-30T08:09:35Z
+	* Lazy load Carp (Todd Rinaldo)
+
 1.021 2016-01-27T20:29:17Z
 	* Freshen the distro a bit
 	* Somehow CPAN still has 0.0.6, so no one has David Muey's enhancements
