@@ -1,5 +1,8 @@
 Revision history for Perl module IO::Interactive
 
+1.022 2016-09-04T05:31:39Z
+	* Stable release with some performance enhancements
+
 1.021_02 - 2016-08-30T08:09:35Z
 	* Lazy load Carp (Todd Rinaldo)
 
