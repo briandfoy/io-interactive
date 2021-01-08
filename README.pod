@@ -2,8 +2,6 @@
 
 =encoding utf8
 
-=for HTML <a href="https://travis-ci.org/briandfoy/io-interactive"><img src="https://travis-ci.org/briandfoy/io-interactive.svg?branch=master" /></a>
-
 =for HTML <a href='https://ci.appveyor.com/project/briandfoy/io-interactive'><img src='https://ci.appveyor.com/api/projects/status/nxocrwut3tcni3ei' /></a>
 
 =for HTML <a href='https://coveralls.io/github/briandfoy/io-interactive?branch=master'><img src='https://coveralls.io/repos/github/briandfoy/io-interactive/badge.svg?branch=master' alt='Coverage Status' /></a>
