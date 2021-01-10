@@ -264,7 +264,7 @@ Currently maintained by brian d foy C<< <bdfoy@cpan.org> >>.
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2005, Damian Conway C<< <DCONWAY@cpan.org> >>. All rights reserved.
+Copyright © 2005-2021, Damian Conway C<< <DCONWAY@cpan.org> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
