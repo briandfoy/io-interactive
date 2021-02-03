@@ -1,3 +1,4 @@
+use 5.008;
 package IO::Interactive;
 
 use strict;
