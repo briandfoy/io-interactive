@@ -161,7 +161,18 @@ This document describes IO::Interactive version 1.02
 =head1 DESCRIPTION
 
 This module provides three utility subroutines that make it easier to
-develop interactive applications...
+develop interactive applications.
+
+The C<ARGV> filehandle, the one that C<< <> >> or an empty
+C<readline()> uses, has various magic associated with it. It's not
+actually opened until you try to read from it. Checking C<-t ARGV>
+before you've tried to read from it might give you the wrong answer.
+Not only that, you might not read from C<ARGV>. If the value in
+C<@ARGV> is the magic filename C<-> (a convention to mean the standard
+filehandle for input or output), C<ARGV> might actually be C<STDIN>.
+You don't want to think about all of this. This module is discussed in
+I<Perl Best Practices> on page 218. Also see the C<ARGV> entry in
+L<perlvar> and the C<readline> entry in L<perlfunc>.
 
 =over
 
