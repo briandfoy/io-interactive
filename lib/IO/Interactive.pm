@@ -272,7 +272,7 @@ This code is in GitHub:
 
 Damian Conway  C<< <DCONWAY@cpan.org> >>
 
-Currently maintained by brian d foy C<< <bdfoy@cpan.org> >>.
+Currently maintained by brian d foy C<< <briandfoy@pobox.com> >>.
 
 1.01 patch DMUEY C<< dmuey@cpan.org >>
 
