@@ -1,2 +1,4 @@
-cpan_user BDFOY
-perls /usr/local/bin/perl:/usr/local/bin/perl5.6.2:/usr/local/bin/perl5.10.0
+cpan_user     BRIANDFOY
+perls         /usr/local/bin/perl:/usr/local/bin/perl5.6.2:/usr/local/bin/perl5.10.0
+skip_kwalitee 1
+skip_prereqs  1
